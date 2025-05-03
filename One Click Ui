@@ -1,0 +1,24 @@
+local OneClickUI = Instance.new("ScreenGui")
+local Logo = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+
+--Properties:
+
+OneClickUI.Name = "One Click UI"
+OneClickUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+OneClickUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Logo.Name = "Logo"
+Logo.Parent = OneClickUI
+Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Logo.BorderSizePixel = 0
+Logo.Position = UDim2.new(0.481171608, 0, 0.519417465, 0)
+Logo.Size = UDim2.new(0, 90, 0, 89)
+Logo.Image = "rbxassetid://106643707830409"
+
+UICorner.Parent = Logo
+
+UIGradient.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 0.50), NumberSequenceKeypoint.new(1.00, 0.50)}
+UIGradient.Parent = Logo
